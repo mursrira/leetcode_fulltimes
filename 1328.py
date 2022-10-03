@@ -1,27 +1,29 @@
+from heapq import heappush
+from typing import List
+
 class Solution:
-    def breakPalindrome(self, palindrome: str) -> str:
+    def findLeastNumOfUniqueInts(self, arr: List[int], k: int) -> int:
         
-        p = list( palindrome )
-        n = len( palindrome )
+        if( len(arr) < k ):
+            return 0
         
-        if (n==1): return ""
+        dictNums = {}
         
-        for i in range( n ):
-            if( p[ i ] != "a" ):
-                p[ i ] = "a"
-                break
-        
-        if( p != p[::-1] ): return "".join( p )
-        
-        p = list( palindrome )
-        
-        for i in range( n-1, -1, -1 ):
+        for num in arr:
             
-            if( p[i] == "a" ):
-                p[i] = "b"
-                break
-                
-        return "".join( p )
+            if num not in dictNums:
+                dictNums[ num ] = 0
             
+            dictNums[ num ] += 1
+        
+        minHeap = [ ]
+        
+        for ( number, times ) in dictNums.items():
+            heappush( minHeap, ( number, times ) )
+        
+        
+            
+        
+        
             
             
