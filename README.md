@@ -1,8 +1,6 @@
-# Leetcode 
+# Full times preperation: 
 
-### Full times preperation: 
+### Daily checkin:  
 
-##### Daily checkin: 
-
-***Nov9, 2022***.  
+***Nov9, 2022***.
  - ###### Q146  
