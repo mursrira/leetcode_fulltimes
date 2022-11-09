@@ -25,3 +25,17 @@ class Solution:
         
         return cnt
             
+            
+"""
+
+HI Simone, Hope all is good.
+
+You are good person and great friend.
+
+Sorry for everything, my summer was rough and i lost balance.
+I wanted to clarify everything in fall but things got rough lol.
+
+Its ok if you dont want to be friend also. Just accept gummy bears
+
+
+"""
