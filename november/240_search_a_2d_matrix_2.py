@@ -1,3 +1,4 @@
+# Time Complexity: O(m*n)
 class Solution:
     def searchMatrix(self, matrix: List[List[int]], target: int) -> bool:
 
@@ -8,7 +9,8 @@ class Solution:
                     return True
 
         return False
-    
+
+# Time Complexity: O(m+n)   
 class Solution:
     def searchMatrix(self, matrix: List[List[int]], target: int) -> bool:
 
