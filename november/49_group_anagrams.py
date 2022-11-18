@@ -14,3 +14,19 @@ class Solution:
 
         
         return res.values()
+    
+    
+class Solution:
+    def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
+
+        res = collections.defaultdict(list)
+
+        for s in strs:
+            str_key = list(s)
+            str_key.sort()
+            str_key = tuple(str_key)
+
+            res[str_key].append(s)
+
+        return res.values()
+            
