@@ -1,6 +1,6 @@
 ## Full times preperation:
 #### Daily checkin:  
-| Date | count Q | Q No. |
+| Date | Count Q | Q No. |
 | --- | ----------- | --------- |
 | Nov9, 2022 | 5 | 146,1762,387,299,1209 |
 | Nov10, 2022 | 8 | 981,704,2,113,20,200,240,98 |
