@@ -1,23 +1,25 @@
 class Solution:
     def canFinish(self, numCourses: int, prerequisites: List[List[int]]) -> bool:
-
+        
         store = collections.defaultdict(list)
+        visit_set = set()        
 
         for ele in prerequisites:
-            c = ele[0]
-            pre = ele[1]
-            store[c].append(pre)
+            c, p = ele[0], ele[1]
+            store[c].append(p)
 
-        visit_set = set()
 
         def dfs(c):
-            if store[c] == []:
-                return True
+            
             if c in visit_set:
                 return False
+            
+            if store[c] == []:
+                return True
 
             visit_set.add(c)
-
+            
+            # Running DFS on prequisites
             for p in store[c]:
                 if not dfs(p): return False
 
@@ -25,6 +27,8 @@ class Solution:
             store[c] = []
             return True
 
+
+        # Do DFS on all courses
         for c in range(numCourses):
             if not dfs(c): return False
 
