@@ -30,3 +30,15 @@ class Solution:
 
         return res.values()
             
+class Solution:
+    def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
+        store = collections.defaultdict(list)
+        for ele in strs:
+            tmp = [0]*26
+            cnt = 0
+            while(cnt<len(ele)):
+                tmp[ord(ele[cnt])-ord('a')]+=1
+                cnt+=1
+            store[tuple(tmp)].append(ele)
+        
+        return store.values()

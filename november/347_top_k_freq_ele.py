@@ -41,3 +41,24 @@ class Solution:
             ele = heappop(h)[1]
             res.append(ele)
         return res
+
+class Solution:
+    def topKFrequent(self, nums: List[int], k: int) -> List[int]:
+        
+        d = collections.defaultdict(int)
+
+        for num in nums:
+            d[num]+=1
+        
+        min_heap = []
+
+        for ke,v in d.items():
+            heapq.heappush(min_heap, (v,ke))
+
+        res = []
+        while(len(min_heap)>0):
+            tmp=heapq.heappop(min_heap)
+            if(len(min_heap)<k):
+                res.append(tmp[1])
+                    
+        return res
