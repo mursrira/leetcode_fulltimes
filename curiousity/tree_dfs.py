@@ -39,7 +39,7 @@ node3 = TreeNode( 3 )
 node4 = TreeNode( 4 )
 node5 = TreeNode( 5 )
 node6 = TreeNode( 6 )
-node7 = TreeNode( 6 )
+node7 = TreeNode( 7 )
 
 node1.left = node2
 node1.right = node3

@@ -1,0 +1,32 @@
+Help on class Developer in module __main__:
+
+class Developer(Employee)
+ |  Methods inherited from Employee:
+ |  
+ |  __init__(self, first, last, pay)
+ |      #constructor
+ |  
+ |  apply_raise(self)
+ |  
+ |  fullname(self)
+ |  
+ |  ----------------------------------------------------------------------
+ |  Class methods inherited from Employee:
+ |  
+ |  from_string(cls, emp_str) from __builtin__.classobj
+ |  
+ |  set_raise_amt(cls, amount) from __builtin__.classobj
+ |  
+ |  ----------------------------------------------------------------------
+ |  Static methods inherited from Employee:
+ |  
+ |  is_workday(day)
+ |  
+ |  ----------------------------------------------------------------------
+ |  Data and other attributes inherited from Employee:
+ |  
+ |  no_of_employees = 0
+ |  
+ |  raise_amt = 1.04
+
+None
