@@ -7,7 +7,7 @@ def topologicalSortUtil(v):
  
     # Recur for all the vertices adjacent to this vertex
     # list<AdjListNode>::iterator i
-    for i in adj[v]:
+    for i in adj[v]:    
         if (not visited[i[0]]):
             topologicalSortUtil(i[0])
  

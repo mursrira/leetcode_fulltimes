@@ -26,3 +26,29 @@ class Solution:
                     self.dfs( ele, r, c, grid )
                     res += 1
         return res
+
+class Solution:
+
+
+    def numIslands(self, grid: List[List[str]]) -> int:
+
+        R=len(grid)
+        C=len(grid[R-1])
+        res=0
+
+        def dfs(r, c):
+            traverse=[(r+1,c),(r-1,c),(r,c-1),(r,c+1)]
+            for r,c in traverse:
+                if(r>=0 and r<R and c>=0 and c<C):
+                    if grid[r][c]=="1":
+                        grid[r][c]="0"
+                        dfs(r,c)
+
+        for r in range(R):
+            for c in range(C):
+                if grid[r][c]=="1":
+                    grid[r][c]="0"
+                    dfs(r,c)
+                    res+=1
+
+        return res

@@ -29,6 +29,24 @@ class Solution:
         ans = []
         self.dfs( root, [], ans )
         return ans
+    
+    
+class Iterative:
+    
+    def dfs(self, root):
+        res=[]
+        stk=[root]
+        
+        while stk:
+            ele=stk.pop()
+            res.append(ele.val)
+            if ele.left:
+                stk.append(ele.left)
+            if ele.right:
+                stk.append(ele.right)
+        
+        return res
+        
         
 
 
@@ -55,9 +73,9 @@ node5.left, node5.right = None, None
 node6.left, node6.right = None, None
 node7.left, node7.right = None, None
 
-obj = Solution()
-res = obj.getDfs( node1 )
-print("res: {}".format(res))
+# obj = Solution()
+# res = obj.getDfs( node1 )
+# print("res: {}".format(res))
 
 """
 
@@ -68,3 +86,7 @@ print("res: {}".format(res))
   4   5   6    7
 
 """
+
+obj = Iterative()
+res = obj.dfs( node1 )
+print("res: {}".format(res))

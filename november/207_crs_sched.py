@@ -33,3 +33,32 @@ class Solution:
             if not dfs(c): return False
 
         return True
+
+class Solution:
+    def canFinish(self, numCourses: int, prerequisites: List[List[int]]) -> bool:
+
+        store=collections.defaultdict(list)
+
+        for x,y in prerequisites:
+            store[x].append(y)
+        
+        def dfs(c,visit):
+            if store[c]==[]:
+                return True
+            if c in visit:
+                return False
+
+            visit.add(c)
+            for nei in store[c]:
+                if not dfs(nei,visit): return False
+            
+            visit.remove(c)
+            store[c]=[]
+            return True
+
+                
+        visit=set()
+        for i in range(numCourses):
+            if not dfs(i,visit):return False
+        
+        return True
