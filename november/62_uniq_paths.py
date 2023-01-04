@@ -31,3 +31,14 @@ class Solution:
             for c in range(1,len(dp[r])):
                 dp[r][c]=dp[r][c-1]+dp[r-1][c]
         return dp[n-1][m-1]
+        
+class Solution:
+    def uniquePaths(self, m: int, n: int) -> int:
+
+        grid=[[1]*n]*m
+
+        for r in range(1,m):
+            for c in range(1,n):
+                grid[r][c]=grid[r][c-1]+grid[r-1][c]
+        
+        return grid[m-1][n-1]
